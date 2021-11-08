@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>    ES6 Parameters</h1>
+<body>
+    <script>
+        document.write("Handling Default Parameters","<br>");
+        function sayHello(msg='hi'){
+            document.write(msg,"<br>")
+        }
+        sayHello();
+        sayHello('howdy!')
+        function add(x,y){
+            return x+y;
+        }
+        document.write(add(100,200));
+       
+        function say(message){
+            message=typeof message !=='undefined' ? message: 'howdy trump!';
+            console.log(message);
+        }
+        say();
+        function greet(msg="hello"){
+            console.log(msg);
+        }
+        greet();
+        greet(undefined);
+        greet("wass dude");
+        document.write("<br> <hr>")
+        function createDiv(h='100px',w='100px',border='solid 3px red'){
+            let div=document.createElement('div');
+            div.style.height=h;
+            div.style.width=w;
+            div.style.border= border;
+            document.body.appendChild(div);
+            return div;
+        }
+        createDiv();
+        createDiv(undefined,undefined,'solid 5px blue');
+
+    </script>
+</body>
+</html>

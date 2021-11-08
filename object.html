@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+      var obj={
+        firstname:"Aishwarya",
+        lastname:"Bellapu",
+        position:function(){
+          console.log("Software Developer Trainee");
+        },
+      }
+      console.log("Original object:");
+      console.log(obj);
+      // Adding new property to object
+      obj.age=22;
+
+      // Adding another way of creating a new property
+      obj['company']="WestAgile Labs";
+      console.log("After adding new properties:");
+      console.log(obj);
+
+      // Deleting a age property from object
+      delete obj.age;
+      console.log("After deleting age property:");
+      console.log(obj);
+
+      // Calling Object method
+      console.log("CAlling  Object method:")
+      console.log(obj.position());
+
+    </script>
+  </body>
+</html>
+</body>
+</html>

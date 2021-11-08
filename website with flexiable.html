@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with flexiable</title>
+</head>
+<style>
+    .flex-container{
+        display:-webkit-flex;
+        display:flex;
+        -webkit-flex-flow:row wrap;
+        font-weight: bold;
+        text-align: center;
+    }
+    .flex-container > *{
+        padding: 10px;
+        flex: 1 100%;
+    }
+    .main{
+        text-align: left;
+        background: blue;
+    }
+    .header{
+        background: chocolate;
+    }
+    .footer{
+        background: darkkhaki;
+    }
+    .aside1{
+        background: darkturquoise;
+    }
+    .aside2{
+        background: fuchsia;
+    }
+    @media all and(min width:800px){
+        .main{
+            flex: 30px;
+        }
+        .aside1{
+            order: 1;
+        }
+        .aside2{
+            order: 2;
+        }
+        .main{
+            order: 2;
+        }
+        .aside2{
+            order: 3;
+        }
+        .footer{
+            order: 4;
+        }
+    }
+
+</style>
+<body>
+    <div class="flex-container">
+        <header class="header">Header</header>
+        <artcile class="main">
+            <p>flex item1 westagile labs
+                flex item2 Inifinty
+                flex illuminate skills</p>
+        </artcile>
+        <aside class="aside aside1">Aside1</aside>
+        <aside class="aside aside2">Aside2</aside>
+        <aside class="footer">Footer</Footer></aside>
+    </div>
+</body>
+</html>

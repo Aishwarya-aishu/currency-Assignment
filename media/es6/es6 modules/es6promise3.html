@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function makePromise(completed){
+            return new Promise(function (resolve,reject){
+                setTimeout(() => {
+            if(completed){
+                resolve("I have completed learning es6");
+            }
+            else{
+                reject("I haven't completed learning es6");
+            }
+        }, 3 *1000 );   
+            });
+        }
+        let learnES6New=makePromise(true);
+        learnES6New.then(
+            success => console.log(success),
+            reason => console.log(reason)
+            );
+            learnES6New.then(
+                value => console.log(value)
+            );
+    </script>
+</body>
+</html>

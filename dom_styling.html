@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="intro">This is an introduction paragraph</p>
+    <p>This is another paragraph</p>
+    <script>
+        var elem=document.getElementById("intro");
+        var styles=window.getComputedStyle(elem);
+        
+        document.write(elem.style.color + "<br>");
+        document.write(elem.style.fontSize + "<br>");
+        document.write(elem.style.fontStyle + "<br>");
+        document.write("<br> <hr>");
+        document.write(styles.getPropertyValue("color"));
+        document.write("<br> <hr>");
+        document.write(styles.getPropertyValue("font-size"));
+        document.write("<br> <hr>");
+        document.write(styles.getPropertyValue("font=weight"));
+        document.write("<br> <hr>");
+        document.write(styles.getPropertyValue("font=style"));
+
+       
+       
+
+
+    </script>
+    <p>
+        <a href="http://www.disney.com" target="_blank" id="myLink">disney.com</a>
+    </p>
+    <script>
+        var link=document.getElementById("mylink");
+        var href=link.getAttribute("href");
+        document.write(href);
+        document.write("<br> <hr>");
+        var target=link.getAttribute("target");
+        document.write(target);
+        
+    </script>
+</body>
+</html>

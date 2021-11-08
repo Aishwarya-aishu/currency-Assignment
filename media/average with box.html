@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text],
+        [type=number],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .form_design {
+            margin: 10% 30%;
+            border: 2px solid;
+            padding: 20px 30px;
+        }
+        
+        #table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #04AA6D;
+            color: white;
+        }
+        
+        #table td,
+        #table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="form_design" id="studentForm">
+        <h4>Enter Your Details:</h4>
+        <input type="text" placeholder="Enter name" id="name" required>
+        <input type="text" placeholder="Enter Collage" id="collage" required>
+
+        <select id="branch" name="country">
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="MECH">MECH</option>
+            <option value="CHEMICAL">CHEMICAL</option>
+          </select>
+        <input type="number" placeholder="Enter first Year marks percentage" id="sem1" required>
+        <input type="number" placeholder="Enter second Year marks percentage" id="sem2" required>
+        <input type="number" placeholder="Enter third Year marks percentage" id="sem3" required>
+        <input type="number" placeholder="Enter fourth Year marks percentage" id="sem4" required>
+        <input type="submit" value="submit" onclick="student()">
+    </form>
+
+    <div id="" style="text-align:center;margin:30px 200px;">
+        <h3>Student Details</h3>
+        <table id="table" style="width:100%;margin-top:50px;">
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Collage</th>
+                <th>Branch</th>
+                <th>Avg.Marks</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let name = document.getElementById('name');
+        let collage = document.getElementById('collage');
+        let branch = document.getElementById('branch');
+        let sem1 = document.getElementById('sem1');
+        let sem2 = document.getElementById('sem2');
+        let sem3 = document.getElementById('sem3');
+        let sem4 = document.getElementById('sem4');
+        let studentForm = document.getElementById('studentForm');
+        let table = document.getElementById('table');
+
+
+        let count = 1;
+
+
+        studentForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+        });
+
+
+
+
+        // class Student {
+        //     constructor(name, collage, branch, sem1, sem2, sem3, sem4) {
+        //         this.name = name;
+        //         this.collage = collage;
+        //         this.branch = branch;
+        //         this.sem1 = sem1;
+        //         this.sem2 = sem2;
+        //         this.sem3 = sem3;
+        //         this.sem4 = sem4;
+        //     }
+
+        // }
+
+        // class Details extends Student {
+        //     constructor(name, collage, branch, sem1, sem2, sem3, sem4) {
+        //         super(name, collage, branch, sem1, sem2, sem3, sem4);
+        //     }
+
+        //     displayAverage() {
+        //         return (this.sem1 + this.sem2 + this.sem3 + this.sem4) / 4;
+        //     }
+        // }
+
+        // let student1 = new Details(name.value, collage.value, branch.value, parseInt(sem1.value), parseInt(sem2.value), parseInt(sem3.value), parseInt(sem4.value));
+        //     console.log("Displaying class", student1.displayAverage());
+
+
+        function student() {
+            console.log(sem1.value);
+            console.log(typeof(sem1));
+            var name1 = document.createTextNode(name.value);
+            var collage1 = document.createTextNode(collage.value);
+            var branch1 = document.createTextNode(branch.value);
+
+            let avgOfsems = (parseInt(sem1.value) + parseInt(sem2.value) + parseInt(sem3.value) + parseInt(sem4.value)) / 4;
+            var sem11 = document.createTextNode(avgOfsems);
+
+            var count1 = document.createTextNode(count);
+
+            let student_detail = [count1, name1, collage1, branch1, sem11];
+
+            let tr = document.createElement('tr');
+
+            for (let item of student_detail) {
+                let td = document.createElement('td');
+                tr.appendChild(td);
+                td.appendChild(item);
+
+            }
+
+            table.appendChild(tr);
+            count = count + 1;
+
+
+
+
+
+
+
+            sem1.value = "";
+            sem2.value = "";
+            sem3.value = "";
+            sem4.value = "";
+            name.value = "";
+            branch.value = "CSE";
+            collage.value = "";
+
+        }
+    </script>
+</body>
+
+</html>

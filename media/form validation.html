@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    //valadation.js
+    /Defining a function to display error message
+ function printError(elemId, hintMsg) {
+     document.getElementById(elemId).innerHTML = hintMsg;
+ }
+ //Defining error variables with default value
+ var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+
+ if (name == "") {
+     printError("nameErr", "Please enter your name");
+ } else {
+     var regex = /^[a-zA-Z\s]+$/;
+     if (regex.test(name) == false) {
+         printError("nameErr", "Please enter a valid name");
+     } else {
+         printError("nameErr", "");
+         nameErr = false;
+     }
+ }
+ if (mobile == "") {
+    printError("mobileErr", "Please enter your mobile number");
+} else {
+    var regex = /^[1-9]\d{9}$/;
+    if (regex.test(mobile) == false) {
+        printError("mobileErr", "Please enter a valid mobile number");
+    } else {
+        printError("mobileErr", "");
+        mobileErr = false;
+    }
+}
+/Prevent the form being submitted if there are any errors
+     if (nameErr || emailErr || mobileErr || countryErr || genderErr == true) {
+
+         return false;
+
+     } else {
+         //creating a string from input data for preview
+         var dataPrev = "You've entered the following details: \n" +
+             "Full Name :" + name + "\n" +
+             "Email Address :" + email + "\n" +
+             "Mobile Number:" + mobile + "\n" +
+             "Country :" + country + "\n" +
+             "Gender :" + gender + "\n";
+         if (hobbies.length) {
+             dataPrev += "Hobbies : " + hobbies.join(" ,")
+         }
+
+         //Dispaly the data in a dialog box
+         alert(dataPrev)
+     }
+
+//class/Prevent the form being submitted if there are any errors
+if (nameErr || emailErr || mobileErr || countryErr || genderErr == true) {
+
+    return false;
+
+} else {
+    //creating a string from input data for preview
+    var dataPrev = "You've entered the following details: \n" +
+        "Full Name :" + name + "\n" +
+        "Email Address :" + email + "\n" +
+        "Mobile Number:" + mobile + "\n" +
+        "Country :" + country + "\n" +
+        "Gender :" + gender + "\n";
+    if (hobbies.length) {
+        dataPrev += "Hobbies : " + hobbies.join(" ,")
+    }
+
+    //Dispaly the data in a dialog box
+    alert(dataPrev)
+}
+
+
+
+}
+.row {
+    padding-bottom: 10px;
+}
+
+.form-inline {
+    border: 1px solid #ccc;
+    padding: 8px 10px 4px;
+    border-radius: 2px;
+}
+
+.form-inline label,
+.form-inline input {
+    display: inline-block;
+    width: auto;
+    padding-right: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 90%;
+}
+input[type="submit"] {
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016BC1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #0165b6;
+}
+
+
+ }
+
+</body>
+</html>

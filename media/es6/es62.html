@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x =10;
+        if(x == 10){
+            let x=20;
+            console.log(x);
+        }
+        console.log(x)
+        var a=10;
+        console.log(window.a);
+        let b=20;
+        console.log(window.b);
+        for (var i=0;i<5;i++){
+            setTimeout(function(){
+                console.log(i);
+            },1000);
+        }
+        for(var i=0;i<5;i++)
+        {
+            (function(j){
+                setTimeout(function(){
+                    console.log(j);
+                }, 1000)
+            })(i);
+        }
+        for(let i=0;i<5;i++){
+            setTimeout(() => console.log(i),1000);
+        }
+        const person={
+            age: 20
+        };
+        person.age=30;
+        console.log(person.age);
+        const p=Object.freeze({
+            age:33
+        });
+        p.age=31;
+        console.log(p.age);
+    </script>
+
+</body>
+</html>

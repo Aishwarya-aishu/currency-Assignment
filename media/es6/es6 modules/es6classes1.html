@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class food{
+            constructor(name,protein,carbs,fat)
+            {
+                this.name=name;
+                this.protein=protein;
+                this.carbs=carbs;
+                this.fat=fat;
+            }
+            toString(){
+                return `${this.name} | ${this.protein}g P ::
+                ${this.carbs}g C:: ${this.fat}g F`;
+            }
+            print()
+            {
+                document.write("<h1>About our food </h1>");
+                document.write("<br><hr>");
+                document.write(this.toString());
+            }
+        }
+        const chicken_breast = new food('chicken breast',26,0,3.5);
+        chicken_breast.print();
+        console.log(chicken_breast.protein);
+    </script>
+</body>
+</html>

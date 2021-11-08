@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - your music is here</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav ul{
+            display: flex;
+            align-items: center;
+            list-style-type:none;
+            height: 65px;
+            background-color: black;
+            color: white;
+        }
+        nav ul li{
+            padding: 0 12px;
+        }
+        .brand img{
+            width:44px;
+
+        }
+        .container{
+            min-height: 75vh;
+            background-color: black;
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            width: 70%;
+            margin: 23px auto;
+        }
+        #bottom{
+            bottom: 0;
+        }
+        .bottom{
+            position: sticky;
+            height: 130px;
+            background-color: black;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+
+        }
+        .icons{
+        margin-top: 14px;
+
+        }
+        .icons i{
+            cursor: pointer;
+
+        }
+        #myProgessBar{
+            width: 80vw;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="songlist">
+            <h1>Best of NCS - No Copyright Sounds</h1>
+        </div>
+        <div class="songBanner"></div>
+        <div class="bottom">
+           <input type="range" name="range" id="myProgessBar" min="0" max="100">
+           <i class="fas fa-3x fa-step-backward"></i><br>
+           <i class="fas fa-3x fa-play-circle"></i><br>
+           <i class="fas fa-3x fa-step-forward"></i>
+
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/debd1bb9cf.js" crossorigin="anonymous"></script>
+</body>
+</html>

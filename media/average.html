@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        div {
+            margin: 0px auto;
+            width: 30%;
+            padding: 30px;
+            font-size: 20px;
+            background-color: #006699;
+        }
+        
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        input[type=submit] {
+            width: 100%;
+            background-color: #003399;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #2F4F4F;
+        }
+        
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        
+        div label {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration form</h1>
+    <div>
+        <form id="form">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="enter first Name" required>
+            <label for="cname">college Name</label>
+            <input type="text" id="cname" name="collegename" placeholder="enter college Name" required>
+            <label for="branch">Branch</label>
+            <select id="branch" name="branch">
+                
+                <option value="cse">CSE</option>
+                <option value="ece">ECE</option>
+                <option value="eee">EEE</option>
+                <option value="civil">CIVIL</option>
+            </select>
+            <label for="mname">marks1</label>
+            <input type="text" id="marks" name="marks1" placeholder="enter marks" required>
+            <label for="mname2">marks2</label>
+            <input type="text" id="marks1" name="marks2" placeholder="enter marks" required>
+            <label for="mname3">marks3</label>
+            <input type="text" id="marks2" name="marks3" placeholder="enter marks" required>
+            <label for="mname4">marks4</label>
+            <input type="text" id="marks3" name="marks4" placeholder="enter marks" required>
+            <input type="submit" value="submit" onclick="validateForm()">
+        </form>
+        <h1 id="head"></h1>
+        <script>
+            let fn = document.getElementById("fname");
+            let cn = document.getElementById("cname");
+            let mn = document.getElementById("marks");
+            let mn2 = document.getElementById("marks1");
+            let mn3 = document.getElementById("marks2");
+            let mn4 = document.getElementById("marks3");
+            let bra = document.getElementById("branch");
+            let head = document.getElementById("head");
+            let form = document.getElementById("form");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+            });
+
+            function validateForm() {
+                let average = (parseInt(marks.value) + parseInt(marks1.value) + parseInt(marks2.value) + parseInt(marks3.value)) / 4;
+
+                console.log(average);
+
+            }
+        </script>
+
+</body>
+
+</html>

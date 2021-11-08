@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+      body{
+          background-color: antiquewhite;
+      }
+      
+      *{
+          margin: 0;
+          padding: 0;
+      }
+      
+      nav{
+          font-family: 'Ubuntu', sans-serif;
+      }
+      
+      nav ul{
+          display: flex;
+          align-items: center;
+          list-style-type: none;
+          height: 65px;
+          background-color: black;
+          color: white;
+      }
+      
+      nav ul li{
+          padding: 0 12px;
+      }
+      .brand img{
+          width: 44px;
+          padding: 0 8px;
+      }
+      
+      .brand {
+          display: flex;
+          align-items: center;
+          font-weight: bolder;
+          font-size: 1.3rem;
+      }
+      
+      .container{
+          min-height: 72vh;
+          background-color: black;
+          color: white;
+         font-family: 'Varela Round', sans-serif;
+         display: flex;
+         margin: 23px auto;
+         width: 70%;
+         border-radius: 12px;
+         padding: 34px;
+         background-image: url('bg.jpg');
+         border-radius: 12px;
+      }
+      
+      .bottom{
+          position: sticky;
+          bottom: 0;
+          height: 130px;
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+      }
+      
+      .icons{
+          margin-top: 14px;
+      }
+      .icons i{
+          cursor: pointer;
+      }
+      
+      #myProgressBar{
+          width: 80vw;
+          cursor: pointer;
+      }
+      
+      .songItemContainer{
+          margin-top: 74px;
+      }
+      
+      .songItem{
+          height: 50px;
+          display: flex;
+          background-color: white;
+         
+          color: black;
+          margin: 12px 0;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 34px;
+      }
+      
+      .songItem img{
+          width: 43px;
+          margin: 0 23px;
+          border-radius: 34px;
+      }
+      
+      .timestamp{
+          margin: 0 23px;
+      }
+      
+      .timestamp i{
+          cursor: pointer;
+      }
+      
+      .songInfo{
+          position: absolute;
+          left: 10vw;
+          font-family: 'Varela Round', sans-serif;
+      }
+      
+      .songInfo img{
+          opacity: 0;
+          transition: opacity 0.4s ease-in;
+      }
+      
+      
+        }
+          </style>
+          </head>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="songlist">
+            <h1>Best of NCS - No Copyright Sounds</h1>
+            <div>
+                <div class="songItem">
+                    <span>Let me Love You</span>
+                    <span class="songlistplay"><span>05:34</span><i class= "far fa-3x fa-play-circle"></i> 
+                </div>
+                <div class="songItem">
+                    <span>chitti</span>
+                    <span class="songlistplay"><span>05:34</span><i class= "far fa-3x fa-play-circle"></i> 
+                </div>
+                <div class="songItem">
+                    <span>see you again</span>
+                    <span class="songlistplay"><span>05:34</span><i class= "far fa-3x fa-play-circle"></i> 
+                </div>
+                <div class="songItem">
+                    <span>closer</span>
+                    <span class="songlistplay"><span>05:34</span><i class= "far fa-3x fa-play-circle"></i> 
+                </div>
+                <div class="songItem">
+                    <span>Despacito</span>
+                    <span class="songlistplay"><span>05:34</span><i class= "far fa-3x fa-play-circle"></i> 
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+       
+    </div>
+     <div class="bottom">
+     <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+           <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i>
+        </div>
+
+        </div>
+    <script src="https://kit.fontawesome.com/debd1bb9cf.js" crossorigin="anonymous"></script>
+    <script>
+       console("welcome to spotify");
+       let audioElement=new Audio('1.mp3');
+
+    </script>
+
+
+    
+</body>
+</html>

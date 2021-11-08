@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 90%;
+            margin: 2em auto;
+            font: 1em/1.3 Arial, Helvetica, sans-serif;
+        }
+        
+        a:link,
+        a:visited {
+            color: #333;
+        }
+        
+        nav ul,
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav a:link,
+        nav na:visited {
+            background-color: rgba(207, 232, 220, 0.2);
+            border: 2px solid rgb(70, 185, 227);
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            background-color: rgba(207, 232, 220, 0.7);
+        }
+        
+        .related {
+            background-color: rgba(79, 185, 227, 0.3);
+            border: 1px soild rgb(70, 185, 227);
+            padding: 10px;
+        }
+        
+        .sidebar {
+            background-color: rgba(207, 232, 220, 0.5);
+            padding: 10px;
+        }
+        
+        article {
+            margin-bottom: 1em;
+        }
+        
+        .grid {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(200, 1fr));
+        }
+        
+        .grid li {
+            border: 1px solid #666;
+            padding: 10px;
+        }
+        
+        @media screen and (min-width: 40em) {
+            article {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                column-gap: 20px;
+            }
+            nav ul {
+                display: flex;
+            }
+            nav li {
+                flex: 1;
+            }
+        }
+        
+        @media screen and (min-width: 70em) {
+            main {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                column-gap: 20px;
+            }
+            article {
+                margin-bottom: 0;
+            }
+            footer {
+                border-top: 1px solid #ccc;
+                margin-top: 2em;
+            }
+            nav ul {
+                display: flex;
+            }
+            nav li {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Meet the Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <div class="content">
+                    <h1>Veggies!</h1>
+                    <p>Vegetables contain a range of health-promoting chemicals such as fibre, vitamins, minerals, antioxidants and other phytochemicals (plant-based chemicals). With every additional serve of fresh plant food that you eat, regardless of
+                        what else you eat, you decrease your risk of death from heart disease or cancer by 5 per cent.</p>
+                    <p>Vegetables also increase your immunity and help prevent overweight and obesity. In fact, when compared to taking antioxidant supplements, eating fresh vegetables is superior at promoting good health on every front.</p>
+                    <p>If you wanted to focus on the one aspect of nutrition that would give you the largest return on investment, then vegetables are the key. Here’s a breakdown of their key nutritional benefits.</p>
+                    <ul class="grid">
+                        <li>
+                            <h2>Turnip Green</h2>
+                            <p>Turnip greens are part of the cruciferous vegetable family, as are kale and broccoli. They are high in nutrients and low in calories. Both the root and the leaves of the turnip are edible, but turnip greens refer specifically
+                                to the stem and leafy green part of the plant.
+                            </p>
+                        </li>
+                        <li>
+                            <h2>Celery Potato Soup</h2>
+                            <p>This light puree is more celery than potato. The potato thickens the soup, a simple potage that is brought to life by the tiny amount of walnut oil that’s drizzled onto each serving.
+                            </p>
+                        </li>
+                        <li>
+                            <h2>Spinanch Fennal</h2>
+                            <p>Spinach and fennel are two of my favorite veggies, so I'm always looking for new ways to use them. This is an amazing side dish, but if you slice the fennel a bit smaller, it also makes a great stuffing for chicken breasts
+                                or beef tenderloin.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <aside class="related">
+                    <p>All the veggies are brought to you by the
+                        <a href="https://www.veggiel.com">Veggies Lpsam </a>
+                    </p>
+                </aside>
+            </article>
+            <aside class="sidebar">
+                <h2>External vegetables based links</h2>
+                <ul>
+                    <li><a href="https://www.thekitchn.com/how-to-cook-broccoli-5-ways-167323">How to cook Broccoli</a></li>
+                    <li><a href="https://www.bbcgoodfood.com/glossary/swiss-chard">Swiss Chard</a></li>
+                    <li><a href="https://www.bbcgoodfood.com/recipes/collection/chirstmas-parsnip">Christmas Parsnip Recipes                    </a></li>
+                </ul>
+            </aside>
+        </main>
+        <footer>&copy;2021 reserved</footer>
+    </div>
+</body>
+
+</html>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 90%;
+            margin: 2em auto;
+            font: 1em/1.3 Arial, Helvetica, sans-serif;
+        }
+        
+        a:link,
+        a:visited {
+            color: #333;
+        }
+        
+        nav ul,
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav a:link,
+        nav na:visited {
+            background-color: rgba(207, 232, 220, 0.2);
+            border: 2px solid rgb(70, 185, 227);
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            background-color: rgba(207, 232, 220, 0.7);
+        }
+        
+        .related {
+            background-color: rgba(79, 185, 227, 0.3);
+            border: 1px soild rgb(70, 185, 227);
+            padding: 10px;
+        }
+        
+        .sidebar {
+            background-color: rgba(207, 232, 220, 0.5);
+            padding: 10px;
+        }
+       
+        
+        
+        article {
+            margin-bottom: 1em;
+        }
+        
+        .grid {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(200, 1fr));
+        }
+        
+        .grid li {
+            border: 1px solid #666;
+            padding: 10px;
+        }
+        
+        @media screen and (min-width: 40em) {
+            article {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                column-gap: 20px;
+            }
+            nav ul {
+                display: flex;
+            }
+            nav li {
+                flex: 1;
+            }
+        }
+        
+        @media screen and (min-width: 70em) {
+            main {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                column-gap: 20px;
+            }
+            article {
+                margin-bottom: 0;
+            }
+           
+            }
+            nav ul {
+                display: flex;
+            }
+            nav li {
+                flex: 1;
+            }
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Montserrat';
+        }
+        section{
+            height: 50vh;
+            width:50%;
+            background-color: azure;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+
+        }
+        .container{
+            width:50%;
+            max-width: 70px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0px 0px 20px ;
+        }
+        footer {
+                border-top: 1px solid #ccc;
+                margin-top: 2em;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+        #slt{
+            width: 200px;
+            font-size: 20px;
+        }
+        #div
+        {
+            border: 1px solid black;
+        }
+        table,tr,td{
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            font-size: auto;
+            padding: auto;
+            text-align: center;
+            border:10px solid #0000;
+
+        }
+    </style>
+</head>
+
+<body>
+    <select id="mySelect" onchange="myFunction()">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="yellow">yellow</option>
+        <option value="green">green</option>
+      </select>
+    <div class="box">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Meet the Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <script>
+            var mySelect=document.getElementById('mySelect')
+            var box=document.getElementById('box')
+            function change_color(){
+                mySelect.style.background=mySelect.value;
+            }
+            </script>
+        <main>            
+            <article>
+                <div class="content">
+                    <h1>Travel Agency!</h1>
+                    <p>A travel agency is a private retailer or public service that provides travel and tourism-related services to the general public on behalf of accommodation or travel suppliers to offer different kinds of travelling packages for each destination.</p>
+                    <p>Travel agencies can provide outdoor recreation activities, airlines, car rentals, cruise lines, hotels, railways, travel insurance, package tours, insurance, guide books, VIP airport lounge access, arranging logistics for luggage and medical items delivery for travellers upon request, public transport timetables, car rentals, and bureau de change services. </p>
+                    <ul class="grid">
+                        <li>
+                            <h2>Business model</h2>
+                            <p>Travel agencies often receive commissions and other benefits and incentives from providers or may charge a fee to the end users.[1] Hotel owners and tour operators typically pay a higher commission rate to travel agencies, whereas airlines typically pay a low commission
+                            </p>
+                        </li>
+                        <li>
+                            <h2>Travel technology</h2>
+                            <p>Travel agencies use the services of the major computer reservations systems, also known as global distribution systems (GDS), including: Amadeus CRS, Galileo GDS, Sabre, and Worldspan, which is a subsidiary of Travelport, which allow for comparison and sorting of hotel and flight rates with multiple companies.
+                            </p>
+                        </li>
+                        <li>
+                            <h2>Types of agencies</h2>
+                            <p>Booking Holdings and Expedia Group, both online travel agencies, are the largest travel agencies on the list of top earning travel companies.[11] Travel agencies can be multinational companies, referred to as "multiples" in the United Kingdom. They can also be medium-sized organizations, referred to as "miniples" in the United Kingdom, or can be independent, small companies. They can be structured as a limited liability company, a sole proprietorship, or can be set up as a host, franchising, or consortium structure, such as in the case of CWT. 
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            
+                <aside class="related">
+                    <p>All the Travel agencies are brought to you by the
+                        <a href="https://www.agencies.com">Travel information </a>
+                    </p>
+          
+                </aside>
+            </article>
+            <aside class="sidebar">
+                <h2>More Travel agencys based links</h2>
+                <ul>
+                   <li><a href="http://www.disney.com" target="_blank">disney.com</a></li>
+                    <li><a href="http://www.wikipedia.org" target="_top">wikipedia.org</a></li>
+                </ul>
+               
+            </aside>
+        </main><br><br>
+        <form id="form">
+            <fieldset name="personalia">
+            <table >
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" id="username" placeholder="username" onchange="myFunction()"></td>
+            </tr>
+            <script>
+                function myFunction() {
+                  var x = document.getElementById("username");
+                  x.value = x.value.toUpperCase();
+                }
+                </script>
+            <table>
+                <tr>
+                    <td>email:</td>
+            <td><input type="text" id="email" placeholder="email" required></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+            <td><input type="submit" value="Register"></tr>
+                </tr>
+            </table>
+            </fieldset>
+            <br>
+            <button type="button" onclick="form.personalia.style.backgroundColor='pink'">Change background color of fieldset</button>
+            <input type="submit">
+            
+        </form>
+        </div>
+        <script>
+            var form=document.getElementById('form')
+            form.addEventListener('submit',function(event){
+            event.preventDefault()
+            var username=document.getElementById('username').value
+            console.log(username)
+            var username=document.getElementById('email').value
+            console.log(email.value)
+            })
+        </script>
+       
+        <footer>&copy;2021 reserved</footer>
+    
+
+</html>
+</body>
+</html>

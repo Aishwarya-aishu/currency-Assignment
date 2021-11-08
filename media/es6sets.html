@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let chars=new Set(['a','b','a','c','c']);
+        console.log(chars)
+        console.log(chars instanceof Set);
+        console.log(chars.size)
+        chars.add('d');
+        console.log(chars)
+        chars.add('e')
+        .add('f')
+        .add('g')
+        .add('h')
+        
+        console.log(chars.has('f'));
+        chars.delete('g')
+        console.log(chars)
+        chars.clear()
+        console.log(chars)
+        let roles=new Set();
+        roles.add('admin')
+        .add('editor')
+
+    </script>
+</body>
+</html>

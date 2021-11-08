@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="message">
+
+        </div>
+        <button id="btnGet">Get message</button>
+    </div>
+    <script>
+        function load(url) {
+            return new Promise(function(resolve, reject) {
+                const request = new XMLHttpRequest();
+                request.onreadystatechange = function(e) {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            resolve(this.response);
+                        } else {
+                            reject(this.status);
+                        }
+                    }
+                }
+                request.open('GET', url, true);
+                request.send();
+            });
+        }
+        const btn = document.querySelector('#btnGet');
+        const msg = document.querySelector('#message');
+        //lets handle the onclick event listener
+        btn.onclick = function() {
+            load('http://www.disney.com')
+                .then(
+                    response => {
+                        const result = JSON.parse(response);
+                        msg.innerHTML = result.message;
+
+                    },
+                    error => msg.innerHTML = `Error getting the message,HHTP status:${error}`
+                )
+        }
+    </script>
+</body>
+</html>

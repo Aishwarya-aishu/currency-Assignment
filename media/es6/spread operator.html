@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread operator</title>
+</head>
+<body>
+    <h1>spread operator</h1>
+    <script>
+        const odd=[1,3,5];
+        const combined=[2,4,6,];
+        document.write("the combined array is:",combined);
+        const new_arr=[2,4,6];
+        document.write(new_arr);
+        document.write("<h1> Rest parameter</h1><hr>");
+        function f(a,b){
+            document.write(a,b);
+        }
+        f(1,2,3,4,5);
+        function compare(a,b){
+            return a-b;
+        }
+        var res=compare.apply(null,[1,2]);
+        console.log(res);
+        let result=compare(...[1,2]);
+        console.log(res);
+        var rivers=['ganga','krishna','nile'];
+        var moreRivers=['cauvery']
+        Array.prototype.push.apply(rivers,moreRivers);
+        console.log(rivers);
+        rivers.push (...moreRivers);
+        console.log(rivers);
+    </script>
+    
+</body>
+</html>

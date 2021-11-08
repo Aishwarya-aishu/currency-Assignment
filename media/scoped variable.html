@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Block Scoped Variables</title>
+  </head>
+  <body>
+    <h1>Block Scoped Variables</h1>
+    <h2>Fibonacci series:-<br></h2>
+    <script type="text/javascript">
+
+
+      let fibonacci=(number=5)=>{
+        num1=0;
+        num2=1;
+        for(let i=1;i<=number;i++){
+          console.log(num1);
+          document.write(num1+"<br>");
+          nextItem=num1+num2;
+          num1=num2;
+          num2=nextItem;
+
+        }
+      }
+
+
+      document.write("Default ");
+      fibonacci();
+
+      let polindrome=(number)=>{
+        let temp1=number.toString();
+        //
+        // let temp1=temp.split("").reverse().join("");
+        // return temp === temp1;
+
+        let temp=number;
+        let sum=0;
+        let l=temp1.length;
+        while(temp){
+          let rem=temp%10;
+          sum=sum*10+rem;
+          temp=Math.floor(temp/10);
+          
+        }
+        if(number === sum){
+          return "Polindrome";
+        }
+        else{
+          return "Not Polindrome";
+        }
+      }
+
+      console.log(polindrome(262));
+
+      let factorial=(number)=>{
+        if(number){
+          return number*factorial(number-1);
+        }
+        else{
+          return 1;
+        }
+      }
+
+      let fact_result=factorial(5);
+      console.log("factorail:",fact_result);
+
+
+
+
+      // var river=['ganga','yamuna','kaveri'];
+      // var moreriver=['amazon','tapadi','krishna'];
+      // document.write(river.push(...moreriver));
+      // console.log(river.push(...moreriver));
+      // river.push(...moreriver);
+      // document.write(river);
+      // console.log(river);
+
+    </script>
+  </body>
+</html>
